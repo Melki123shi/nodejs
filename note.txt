@@ -1,0 +1,60 @@
+const { Module } = require("@nestjs/common")
+
+globals - no window
+
+__dirname = path to current directory
+__filename = file name
+require = function to use Modules(commonJS)    always start with ./ beacause there are going to be third party modules
+and built in modules. no nedd to add the .js extension 
+module = info about module(file)
+process = info about env where the program is bring executed
+
+setInterval(()=> {
+    console.log('holl')
+},4000)
+/////////////////////////////
+* commonJS(library under the hood)(get them by default), every file is module(by default)
+* modules = Encapsulated code (only sharing minimum(what we want))
+* execute one file but use different files to separate your code
+  gives better structure
+###############
+* using simply require('./) with out assigning it is used for third party modules
+* using simply require('./) with out assigning it will call the function and console.log the 
+  out put of the function if the function has been called in the module
+
+
+
+************************************************
+const names = require('./names')
+const sayHi = require('./utils')
+const items = require('./other_method')
+
+console.log(items)
+// sayHi(names.melki)
+// sayHi(names.heran)
+
+****************************************************
+
+
+
+######################
+built-in modules
+
+*** Os modules
+don't have ./ in the require
+
+**** Path modules
+
+***** FS Module(file system)
+= ascyncronously and syncrenously
+utf goes between the content and the path
+
+***** HTTP Module(server setup)
+to set up a webserver
+
+node comes with npm which is used for - 3 -things reuse our code in other project
+- use code written by other developers 
+- share our code with other developers
+
+#####################################
+= to  add json we use "npm init -y"
